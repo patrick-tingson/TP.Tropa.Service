@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "bin/Release/net8.0/publish",
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/e1a23d68-d8ce-4807-942a-c0670f1df893/resourceGroups/personal/providers/Microsoft.Web/sites/dev-tropa-service"
+}

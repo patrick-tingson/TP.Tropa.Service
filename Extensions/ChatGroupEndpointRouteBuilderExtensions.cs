@@ -4,7 +4,7 @@ public static class ChatGroupEndpointRouteBuilderExtensions
 {
     public static void AddChatGroupEndpoints(this IEndpointRouteBuilder app)
     {
-        app.MapGet("/api/v1/group", async (
+        app.MapGet("/v1/group", async (
             string id, 
             HttpContext context,
             IChatCacheLogic logic
@@ -24,7 +24,7 @@ public static class ChatGroupEndpointRouteBuilderExtensions
             .Produces(404)
             .Produces(500);
 
-        app.MapPost("/api/v1/group", async (IChatCacheLogic logic) => await logic.CreateGroupAsync())
+        app.MapPost("/v1/group", async (IChatCacheLogic logic) => await logic.CreateGroupAsync())
             .Produces<ChatGroupModel>(200)
             .Produces(401)
             .Produces(500);
